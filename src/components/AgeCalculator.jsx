@@ -1,7 +1,49 @@
+const inputFieldClassName = "mt-1 w-24 block px-3 py-2 bg-white border border-gray-300 rounded-md shadow-sm placeholder-gray-400 focus:outline-none focus:ring-indigo-500 focus:border-indigo-500 sm:text-sm"
+const labelClassName = "block text-sm font-medium text-gray-700";
 function AgeCalculator() {
     return (
-        <div className='bg-neutral-white p-20'> 
-        
+        <div className='bg-neutral-white p-8 rounded-t-xl rounded-bl-xl rounded-br-[150px]'> 
+        <div className="flex flex-col">
+            <div className="flex flex-row space-x-4">
+                <div className="flex flex-col">
+                    <label htmlFor="day" className={labelClassName}>Day</label>
+                    <input
+                    type="number"
+                    name="day"
+                    id="day"
+                    className={inputFieldClassName}
+                    placeholder="DD"
+                    />
+                </div>
+                <div className="flex flex-col">
+
+                    <label htmlFor="month"  className={labelClassName}>Month</label>
+                    <input
+                    type="number"
+                    name="month"
+                    id="month"
+                    className={inputFieldClassName}
+                    placeholder="MM"
+                    />
+                </div>
+                <div className="flex flex-col">
+                    <label htmlFor="year"  className={labelClassName}>Year</label>
+                    <input
+                    type="number"
+                    name="year"
+                    id="year"
+                    className={inputFieldClassName}
+                    placeholder="YYYY"
+                    />
+                </div>
+            </div>
+            <div className="flex flex-row items-center space-x-4">
+                <hr className="flex-1"></hr>
+                <button className="rounded-[100%] bg-primary-purple p-4 hover:bg-neutral-off-black transition:hover duration-300">
+                    <img className="w-8" src="./icon-arrow.svg" alt="Icon Arrow Submit"></img>
+                </button>
+            </div>
+        </div>
         </div>
     )
 }
