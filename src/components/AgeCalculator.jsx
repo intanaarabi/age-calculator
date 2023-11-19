@@ -15,7 +15,7 @@ function AgeCalculator() {
 
     //Styling
     function getInputClassName(fieldName) {
-        let baseClasses = "mt-1 w-24 block px-3 py-2 bg-white border border-gray-300 rounded-md shadow-sm placeholder-gray-400 focus:outline-none focus:ring-primary-purple focus:border-primary-purple sm:text-sm"
+        let baseClasses = "mt-1 w-20 md:w-24 block px-3 py-2 bg-white border border-gray-300 rounded-md shadow-sm placeholder-gray-400 focus:outline-none focus:ring-primary-purple focus:border-primary-purple sm:text-sm"
         let errorClass = errors[fieldName] ? "border-primary-light-red" : "";
         return `${baseClasses} ${errorClass}`;
     }
@@ -31,7 +31,7 @@ function AgeCalculator() {
 
     return (
         <form onSubmit={handleSubmit(onSubmit)}>
-            <div className='bg-neutral-white p-8 rounded-t-xl rounded-bl-xl rounded-br-[150px]'> 
+            <div className='bg-neutral-white p-6 py-12 md:p-8 md:py-8 rounded-t-xl rounded-bl-xl rounded-br-[150px]'> 
             <div className="flex flex-col">
             <div className="flex flex-row space-x-4">
                     <div className="flex flex-col">
@@ -90,13 +90,13 @@ function AgeCalculator() {
                         {errors.year && <span className={errorClassName}>{errors.year.message}</span>}
                     </div>
             </div>
-            <div className="flex flex-row items-center space-x-4">
-                <hr className="w-[350px]"></hr>
-                <button type="submit" className="rounded-[100%] bg-primary-purple p-4 hover:bg-neutral-off-black transition:hover duration-300">
+            <div className="flex flex-row items-center space-x-4 relative py-12 md:p-0">
+                <hr className="w-[100%] md:w-[350px]"></hr>
+                <button type="submit" className="absolute left-1/3 md:left-0 md:relative rounded-[100%] bg-primary-purple p-4 hover:bg-neutral-off-black transition:hover duration-300">
                     <img className="w-6" src="./icon-arrow.svg" alt="Icon Arrow Submit"></img>
                 </button>
             </div>
-            <div className="flex flex-col space-y-2 italic font-extrabold text-6xl">
+            <div className="flex flex-col space-y-2 italic font-extrabold text-5xl md:text-6xl">
                 <div><span className="text-primary-purple">--</span>years</div>
                 <div><span className="text-primary-purple">--</span>months</div>
                 <div><span className="text-primary-purple">--</span>days</div>
